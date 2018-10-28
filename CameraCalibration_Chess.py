@@ -31,7 +31,7 @@ def SaveCamCalibration():
             
             cv2.drawChessboardCorners(frame, (7,10), corners, ret)
             count += 1
-            print("[%d]", %count)
+            print("[%d]", count)
             
         cv2.imshow("img", frame)
         
@@ -49,5 +49,5 @@ def SaveCamCalibration():
     np.savez("calib.npz", ret = ret, mtx=mtx, dist=dist, rvecs=rvecs, tvecs=tvecs)
     print("Save camera calibration data!")
     
-saveCamCalibration()
+SaveCamCalibration()
     

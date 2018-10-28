@@ -22,14 +22,14 @@ def tracking():
             hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
             
             #HSV에서 BGR 로 가정할 범위를 정의함
-            lower_blue = np.array([110,100,100])
-            upper_blue = np.array([130,255,255])
+            lower_blue = np.array([100,100,100])
+            upper_blue = np.array([160,255,255])
             
-            lower_green = np.array([50,100,100])
-            upper_green = np.array([70,255,255])
+            lower_green = np.array([40,100,100])
+            upper_green = np.array([100,255,255])
             
-            lower_red = np.array([-10, 100, 100])
-            upper_red = np.array([10,255,255])
+            lower_red = np.array([-40, 100, 100])
+            upper_red = np.array([40,255,255])
             
             mask_blue = cv2.inRange(hsv, lower_blue, upper_blue)
             mask_green = cv2.inRange(hsv, lower_green, upper_green)
