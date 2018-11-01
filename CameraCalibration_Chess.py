@@ -9,6 +9,7 @@ import numpy as np
 import cv2
 
 def SaveCamCalibration():
+    
     termination = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
     
     objp = np.zeros((7*10, 3), np.float32)
@@ -19,7 +20,8 @@ def SaveCamCalibration():
     
     cap = cv2.VideoCapture(1)
     count = 0
-    while True:
+    while (cap.isOpened()):
+    
         ret , frame = cap.read()
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         
