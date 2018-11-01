@@ -21,8 +21,8 @@ def SaveCamCalibration():
     cap = cv2.VideoCapture(1)
     count = 0
     while (cap.isOpened()):
-    
         ret , frame = cap.read()
+        gray = frame
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         
         ret, corners = cv2.findChessboardCorners(gray, (7,10), None)

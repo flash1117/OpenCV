@@ -84,6 +84,7 @@ class App:
 video_src = 1
 App(video_src).run()
 cv2.destroyAllWindows()
+print("나 실행됨")
                             
                 
                 
